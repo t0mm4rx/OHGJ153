@@ -1,6 +1,7 @@
 var player;
 var enemies = new Array();
 var sSuccess, sChange, sMusic, sDeath;
+var ended = false;
 
 function preload() {
   sSuccess = loadSound("res/success.wav");
@@ -20,7 +21,7 @@ function setup() {
 
 }
 function keyTyped(){
-    if(key === ' '){
+    if(key === ' ' && !ended){
         player.forme += 1;
         player.forme %= 3;
 
@@ -39,7 +40,7 @@ function draw() {
         enemy.draw();
     }
 
-    if (frameCount % 60 == 0) {
+    if (frameCount % 60 == 0 && !ended) {
 
       let pos = random(0, 4);
       if (pos <= 1) {
