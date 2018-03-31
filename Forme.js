@@ -9,10 +9,11 @@ function Forme() {
 
   this.draw = function() {
     fill(0);
+    rectMode(CENTER);
     if (this.forme == 0) {
       rect(this.pos.x, this.pos.y, this.size, this.size);
     } else if (this.forme == 1) {
-      triangle(this.pos.x - this.size / 2, this.pos.y - this.size / 2, this.pos.x, this.pos.y + this.size / 2, this.pos.x + this.size / 2, this.pos.y - this.size / 2);
+      triangle(this.pos.x - this.size / 2, this.pos.y + this.size / 2, this.pos.x, this.pos.y - this.size / 2, this.pos.x + this.size / 2, this.pos.y + this.size / 2);
     } else if (this.forme == 2) {
       ellipse(this.pos.x, this.pos.y, this.size, this.size);
     }
