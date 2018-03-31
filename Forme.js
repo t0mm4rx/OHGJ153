@@ -1,8 +1,8 @@
-function Forme() {
+function Forme(x,y) {
 
   this.size = 50;
 
-  this.pos = createVector(width / 2, height / 2);
+  this.pos = createVector(x,y);
   //this.pos = {x: width / 2, y: height / 2};
 
   this.forme = 2; // 0 = carré, 1 = triangle, 2 = rond
